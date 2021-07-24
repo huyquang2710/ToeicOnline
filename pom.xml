@@ -39,8 +39,21 @@
 
         <!--testNG-->
         <testNg.version>6.8.7</testNg.version>
+
+        <!--Sitemesh Decorator-->
+        <sitemesh.version>2.4.2</sitemesh.version>
+
+        <!--JSTL-->
+        <jstl.version>1.2</jstl.version>
     </properties>
     <dependencies>
+        <!--JSTL-->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
         <!--JSP Servlet API-->
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
@@ -72,6 +85,13 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testNg.version}</version>
+        </dependency>
+
+        <!--Sitemesh Decorator-->
+        <dependency>
+            <groupId>opensymphony</groupId>
+            <artifactId>sitemesh</artifactId>
+            <version>${sitemesh.version}</version>
         </dependency>
     </dependencies>
 </project>
