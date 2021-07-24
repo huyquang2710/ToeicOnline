@@ -32,6 +32,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="toeic-web-logic" />
+    <orderEntry type="module" module-name="toeic-core-web" />
+    <orderEntry type="module" module-name="toeic-core-dto" />
     <orderEntry type="module" module-name="toeic-core-persistence-data" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.1" level="project" />

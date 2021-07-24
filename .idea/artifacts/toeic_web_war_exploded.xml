@@ -17,6 +17,12 @@
           <element id="archive" name="toeic-web-logic-1.0.jar">
             <element id="module-output" name="toeic-web-logic" />
           </element>
+          <element id="archive" name="toeic-core-web-1.0.jar">
+            <element id="module-output" name="toeic-core-web" />
+          </element>
+          <element id="archive" name="toeic-core-dto-1.0.jar">
+            <element id="module-output" name="toeic-core-dto" />
+          </element>
           <element id="archive" name="toeic-core-peristence-data-1.0.jar">
             <element id="module-output" name="toeic-core-persistence-data" />
           </element>

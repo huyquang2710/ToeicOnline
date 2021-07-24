@@ -6,16 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="toeic-core-common" />
+        <module name="toeic-core-service-impl" />
+        <module name="toeic-web-logic" />
+        <module name="toeic-core-dto" />
+        <module name="toeic-core-data" />
         <module name="toeic-core-service" />
         <module name="toeic-core-utils" />
         <module name="toeic-core-dao-impl" />
-        <module name="toeic-core-common" />
+        <module name="toeic-core-web" />
         <module name="toeic-core-dao" />
-        <module name="toeic-core-service-impl" />
-        <module name="toeic-web-logic" />
         <module name="toeic-web" />
-        <module name="toeic-core-dto" />
-        <module name="toeic-core-data" />
         <module name="toeic-core-persistence-data" />
         <module name="toeic-core-test" />
       </profile>
@@ -31,6 +32,7 @@
       <module name="toeic-core-service-impl" target="8" />
       <module name="toeic-core-test" target="8" />
       <module name="toeic-core-utils" target="8" />
+      <module name="toeic-core-web" target="8" />
       <module name="toeic-web" target="8" />
       <module name="toeic-web-logic" target="8" />
       <module name="ToeicOnline" target="8" />
