@@ -1,5 +1,7 @@
 package com.web.core.controller.admin;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +12,7 @@ import java.io.IOException;
 
 @WebServlet("/login.html")
 public class LoginController extends HttpServlet {
+    private final Logger log = Logger.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher rd = req.getRequestDispatcher("/views/web/login.jsp");
@@ -18,6 +21,8 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        log.error("SAI ROI");
+        RequestDispatcher rd = req.getRequestDispatcher("/views/web/login.jsp");
+        rd.forward(req, resp);
     }
 }

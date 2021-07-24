@@ -1,5 +1,6 @@
 <%@ include file="/common/taglib.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:url var="formUrl" value="/login.html" />
 <html>
 <head>
     <title>Login Page</title>
@@ -15,7 +16,7 @@
 
             <div class="space-6"></div>
 
-            <form>
+            <form action="${formUrl}" method="post">
                 <fieldset>
                     <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -41,7 +42,7 @@
                             <span class="lbl"> Remember Me</span>
                         </label>
 
-                        <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                        <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
                             <i class="ace-icon fa fa-key"></i>
                             <span class="bigger-110">Login</span>
                         </button>
