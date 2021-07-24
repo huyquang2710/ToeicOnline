@@ -24,6 +24,7 @@
         <module>toeic-core-web</module>
         <module>untitled</module>
         <module>toeic-core-web</module>
+        <module>toeic-core-serviceimpl</module>
     </modules>
 
     <properties>

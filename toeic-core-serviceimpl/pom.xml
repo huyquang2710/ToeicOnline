@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>toeic-core-service-impl</artifactId>
+    <artifactId>toeic-core-serviceimpl</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
