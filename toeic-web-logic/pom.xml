@@ -14,15 +14,23 @@
     <dependencies>
         <dependency>
             <groupId>com.web</groupId>
-            <artifactId>toeic-core-web</artifactId>
+            <artifactId>toeic-core-dto</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.web</groupId>
-            <artifactId>toeic-core-dto</artifactId>
+            <artifactId>toeic-core-web</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.web</groupId>
+            <artifactId>toeic-core-service</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.web</groupId>
+            <artifactId>toeic-core-serviceimpl</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
