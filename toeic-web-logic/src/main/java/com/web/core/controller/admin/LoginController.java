@@ -37,12 +37,12 @@ public class LoginController extends HttpServlet {
                     if (userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_ADMIN)) {
                         req.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
                         req.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ban la ADMIN");
-                    } else if (userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)) {
-                        req.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
-                        req.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ban la USER");
-                    }
+            } else if (userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)) {
+                req.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
+                req.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ban la USER");
+            }
 
-                }
+        }
             }
         } catch (NullPointerException e) {
             log.error(e.getMessage(), e);
