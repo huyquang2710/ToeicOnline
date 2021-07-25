@@ -52,8 +52,17 @@
 
         <!--Log4j-->
         <log4j.version>1.2.17</log4j.version>
+
+        <!--Bean Utils-->
+        <bean.utils.version>1.9.3</bean.utils.version>
     </properties>
     <dependencies>
+        <!--Bean Utils-->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${bean.utils.version}</version>
+        </dependency>
         <!--Log4j-->
         <dependency>
             <groupId>log4j</groupId>

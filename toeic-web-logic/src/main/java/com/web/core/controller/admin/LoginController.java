@@ -1,5 +1,8 @@
 package com.web.core.controller.admin;
 
+import com.web.core.command.UserCommand;
+import com.web.core.dto.UserDTO;
+import com.web.core.web.utils.FormUtil;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -21,7 +24,9 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.error("SAI ROI");
+        //common bean utils trong servlet
+        UserCommand command = FormUtil.populate((UserCommand.class), req);
+        UserDTO pojo = command.getPojo();
         RequestDispatcher rd = req.getRequestDispatcher("/views/web/login.jsp");
         rd.forward(req, resp);
     }
