@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class UserDAOImpl extends AbstractDao<Integer, UserEntity> implements UserDAO {
-    @Override
+/*    @Override
     public UserEntity isUserExist(String name, String password) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
@@ -35,6 +35,30 @@ public class UserDAOImpl extends AbstractDao<Integer, UserEntity> implements Use
 
     @Override
     public UserEntity findRoleByUser(String name, String password) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        UserEntity entity = new UserEntity();
+
+        try {
+            StringBuilder hql = new StringBuilder("FROM UserEntity WHERE name= :name AND password= :password");
+            Query query = session.createQuery(hql.toString());
+            query.setParameter("name", name);
+            query.setParameter("password", password);
+            entity = (UserEntity) query.uniqueResult();
+            transaction.commit();
+        }
+        catch (HibernateException e) {
+            transaction.rollback();
+            throw e;
+        }
+        finally {
+            session.close();
+        }
+        return entity;
+    }*/
+
+    @Override
+    public UserEntity findUserByUserNameAndPassword(String name, String password) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         UserEntity entity = new UserEntity();

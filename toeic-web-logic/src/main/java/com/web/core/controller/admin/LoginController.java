@@ -35,21 +35,19 @@ public class LoginController extends HttpServlet {
             if (userService.isUserExist(pojo) != null) {
                 if (userService.findRoleByUser(pojo) != null && userService.findRoleByUser(pojo).getRoleDTO() != null) {
                     if (userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_ADMIN)) {
-                        req.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
-                        req.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ban la ADMIN");
-            } else if (userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)) {
-                req.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
-                req.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ban la USER");
-            }
-
-        }
+                        resp.sendRedirect("/admin-home.html");
+                    } else if (userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)) {
+                        resp.sendRedirect("/home.html");
+                    }
+                }
             }
         } catch (NullPointerException e) {
             log.error(e.getMessage(), e);
             req.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
             req.setAttribute(WebConstant.MESSAGE_RESPONSE, "Sai tai khoan hoac mat khau");
+            RequestDispatcher rd = req.getRequestDispatcher("/views/web/login.jsp");
+            rd.forward(req, resp);
         }
-        RequestDispatcher rd = req.getRequestDispatcher("/views/web/login.jsp");
-        rd.forward(req, resp);
+
     }
 }
