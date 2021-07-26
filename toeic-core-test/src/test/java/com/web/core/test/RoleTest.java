@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RoleTest {
-    @Test
+   /* @Test
     public void checkFindAll() {
         RoleDao roleDao = new RoleDaoImpl();
         List<RoleEntity> list = roleDao.findAll();
@@ -51,5 +51,5 @@ public class RoleTest {
         listId.add(3);
         RoleDao roleDao = new RoleDaoImpl();
         Integer count = roleDao.delete(listId);
-    }
+    }*/
 }

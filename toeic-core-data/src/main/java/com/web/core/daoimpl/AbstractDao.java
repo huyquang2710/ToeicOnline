@@ -106,7 +106,7 @@ public class AbstractDao<ID extends Serializable, T> implements GenericDao<ID, T
     }
 
     @Override
-    public Object[] findyProperty(String property, Object value, String sortExpression, String sortDirection) {
+    public Object[] findyProperty(String property, Object value, String sortExpression, String sortDirection, Integer offset, Integer limit) {
         List<T> list = new ArrayList<>();
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
@@ -128,6 +128,13 @@ public class AbstractDao<ID extends Serializable, T> implements GenericDao<ID, T
                 query1.setParameter("value", value);
             }
 
+            if (offset != null && offset >= 1) {
+                query1.setFirstResult(offset);
+            }
+
+            if (limit != null && limit > 1) {
+                query1.setMaxResults(limit);
+            }
             list = query1.list();
 
             //Size tong so item cua list tra ve

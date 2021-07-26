@@ -10,9 +10,9 @@ public class AbstractCommand<T> {
     protected T pojo;
     private String crudaction;
     private List<T> listResult;
-    private String tableId = "tableList";
-    private int maxPageItems = 5;
-    private int totalItems = 0;
+    private String tableId = "tableList"; // get ID url
+    private int maxPageItems = 5; //hien thi so item tren 1 page
+    private int totalItems = 0; //tra ve size cua List
     private int firstItem = 0;
     private String sortExpression;
     private String sortDirection;
